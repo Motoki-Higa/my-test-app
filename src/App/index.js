@@ -1,20 +1,24 @@
 import { Routes, Route } from "react-router-dom";
-import Header from "../components/Header/index.tsx";
-import Home from "../pages/Home/index.tsx";
-import About from "../pages/About/index.tsx";
-import Company from "../pages/Company/index.tsx";
-import './App.css';
+import Header from "../components/Header/";
+import Home from "../pages/Home/";
+import Memo from "../pages/Memo/";
+import Snippets from "../pages/Snippets/";
+import AsyncUnitTest from '../pages/Snippets/lists/AsyncUnitTest'
+import { StyledApp } from './StyledComponents'
 
 function App() {
   return (
-    <div className="App">
+    <StyledApp>
       <Header />
+
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="company" element={<Company />} />
+        <Route path="memo" element={<Memo />} />
+        <Route path="snippets" element={<Snippets />}>
+          <Route path="asyncunittest" element={<AsyncUnitTest />} />
+        </Route>
       </Routes>
-    </div>
+    </StyledApp>
   );
 }
 
