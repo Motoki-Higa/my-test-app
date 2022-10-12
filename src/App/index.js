@@ -4,6 +4,7 @@ import Home from "../pages/Home/";
 import Memo from "../pages/Memo/";
 import Snippets from "../pages/Snippets/";
 import AsyncUnitTest from '../pages/Snippets/lists/AsyncUnitTest'
+import NormalUnitTest from '../pages/Snippets/lists/NormalUnitTest'
 import { StyledApp } from './StyledComponents'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="memo" element={<Memo />} />
         <Route path="snippets" element={<Snippets />}>
           <Route path="asyncunittest" element={<AsyncUnitTest />} />
+          <Route path="normalunittest" element={<NormalUnitTest />} />
         </Route>
       </Routes>
     </StyledApp>

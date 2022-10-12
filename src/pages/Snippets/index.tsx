@@ -8,6 +8,7 @@ const Snippets = () => {
 
       <nav>
         <li><Link to='asyncunittest'>Async Unit Test</Link></li>
+        <li><Link to='normalunittest'>Normal Unit Test</Link></li>
       </nav>
 
       <hr />
